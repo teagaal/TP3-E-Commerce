@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Qué es eso</title>
+</head>
+
+<body>
+  <main class="main--container">
+    <nav class="navbar">
+      <h1>Quesería
+        <i>Qué es eso</i>
+      </h1>
+      <section class="login">
+        <p>¡Hola, {{user}}!</p>
+        <button id="logout" type="button">Cerrar sesión</button>
+      </section>
+      <section class="cart-container">
+        <p class="cart">Carrito</p>
+        <div class="cart-summary"></div>
+        <p>Total</p>
+        <span>$</span>
+        <span class="total"></span>
+      </section>
+    </nav>
+    <section class="upload-form">
+      <p>URL de la imagen:</p>
+      <input id="imageUrl" type="text" />
+      <p>Título del producto:</p>
+      <input id="itemTitle" type="text" />
+      <p>Precio del producto:</p>
+      <input id="itemPrice" type="text" />
+      <button id="upload" type="button">Enviar</button>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="/javascripts/main.js"></script>
+
+</body>
+
+</html>

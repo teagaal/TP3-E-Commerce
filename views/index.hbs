@@ -1,2 +1,60 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Qué es eso</title>
+</head>
+
+<body>
+  <main class="main--container">
+    <nav class="navbar">
+      <h1>Quesería
+        <i>Qué es eso</i>
+      </h1>
+      <section class="login">
+        <p>Inicio de sesión</p>
+        <p>Nombre de usuario</p>
+        <input id="username" type="text" name="" value="" />
+        <p>Contraseña</p>
+        <input id="password" type="password" name="" value="" />
+        <button id="send-data" type="button" name="button">Entrar</button>
+      </section>
+      <section class="cart-container">
+        <p class="cart">Carrito</p>
+        <div class="cart-summary"></div>
+        <p>Total</p>
+        <span>$</span><span class="total"></span>
+      </section>
+    </nav>
+    <section class="products--container">
+      <div class="products">
+        <ul>
+          {{#each product}}
+          <li class="card">
+            <div class="product-desc">
+              <h2 class="product">{{this.product}}</h2>
+              <span class="currency">$</span>
+              <span class="price">{{this.price}}</span>
+              <button type="button" name="button" class="add-item">Agregar al carrito</button>
+            </div>
+            <div class="product-image">
+              <img src="{{this.url}}" alt="">
+            </div>
+          </li>
+          {{/each}}
+        </ul>
+
+      </div>
+
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+  <script src="/javascripts/main.js"></script>
+
+</body>
+
+</html>
